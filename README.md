@@ -1,2 +1,13 @@
 # lua-ip
-基于lua的IP查询接口
+A very simple IP address query interface written in lua language based on OpenResty.
+
+### usage
+Simply insert the code in your nginx server configuration:
+```
+server {
+    ...
+    location /ip {
+        content_by_lua_file  /path/to/ip.lua;
+    }
+}
+```
